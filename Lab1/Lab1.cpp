@@ -24,6 +24,13 @@ int main()
 
     cout << "Polynomial А: " << A << '\n';
     cout << "Polynomial B: " << B << '\n';
+    cout << "Polynomial A==B:" << (A == B) << '\n';
+    cout << "Polynomial A!=B:" << (A != B) << '\n';
+    cout << "Polynomial A>=B:" << (A >= B) << '\n';
+    cout << "Polynomial A<=B:" << (A <= B) << '\n';
+
+    cout << "Polynomial A>B:" << (A > B) << '\n';
+    cout << "Polynomial A<B:" << (A < B) << '\n';
 
     cout << "Polynomial A+B:" << A + B << '\n';
     cout << "Polynomial A+=B:" << (A += B) << '\n';

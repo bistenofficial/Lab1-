@@ -24,12 +24,12 @@ public:
     BinPolynom operator*=(const BinPolynom&); 
     BinPolynom operator=(const BinPolynom&);
 
-    BinPolynom operator==(const BinPolynom&);
-    BinPolynom operator<=(const BinPolynom&);
-    BinPolynom operator>=(const BinPolynom&);
-    BinPolynom operator<(const BinPolynom&);
-    BinPolynom operator>(const BinPolynom&);
-    BinPolynom operator!=(const BinPolynom&);
+    bool operator==(const BinPolynom&);
+    bool operator!=(const BinPolynom&);
+    bool operator>=(const BinPolynom&);
+    bool operator<=(const BinPolynom&);
+    bool operator<(const BinPolynom&);
+    bool operator>(const BinPolynom&);
 
     friend ostream& operator<<(ostream& s, const BinPolynom& c);
     friend istream& operator>>(istream& s, BinPolynom& c); 

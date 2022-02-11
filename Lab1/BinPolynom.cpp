@@ -183,7 +183,109 @@ BinPolynom BinPolynom::operator*=(const BinPolynom& t)//оператор умножения А*В
 
     return Y;
 }
+bool BinPolynom::operator == (const BinPolynom& t)
+{
+    if (n == t.n)
+    {
+        if (n == 0)
+        {
+            if (koef[0] != t.koef[0])
+                return false;
+            else
+            {
+                return true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if (koef[i] != t.koef[i])
+                    return false;
+            }
+            return true;
+        }
+    }
+    else return false;
+}
+bool BinPolynom::operator != (const BinPolynom& t)
+{
+    if (n == t.n)
+    {
+        if (n == 0)
+        {
+            if (koef[0] != t.koef[0])
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < n; i++)
+            {
+                if (koef[i] != t.koef[i])
+                    return true;
+            }
+            return false;
+        }
+    }
+    else return true;
+}
+bool BinPolynom::operator >= (const BinPolynom& t)
+{
+    if (n >= t.n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (koef[i] < t.koef[i])
+                return false;
+        }
+        return true;
+    }
+    else return false;
+}
 
+bool BinPolynom::operator <= (const BinPolynom& t)
+{
+    if (n <= t.n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (koef[i] > t.koef[i])
+                return false;
+        }
+        return true;
+    }
+    else return false;
+}
+bool BinPolynom::operator < (const BinPolynom& t)
+{
+    if (n <= t.n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (koef[i] >= t.koef[i])
+                return false;
+        }
+        return true;
+    }
+    else return false;
+}
+bool BinPolynom::operator > (const BinPolynom& t)
+{
+    if (n >= t.n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            if (koef[i] <= t.koef[i])
+                return false;
+        }
+        return true;
+    }
+    else return false;
+}
 BinPolynom BinPolynom::operator = (const BinPolynom& t)
 {
     if (this != &t)
