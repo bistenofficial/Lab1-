@@ -7,7 +7,7 @@ class BinPolynom
 {
 private:
     int n; //степень полинома
-    double* koef; //указатель на массив коэффициентов полинома koef[i] - коэффициент при i-й степени
+    int* koef; //указатель на массив коэффициентов полинома koef[i] - коэффициент при i-й степени
 public:
 	BinPolynom();
     BinPolynom(int an);//конструктор с параметрами
@@ -25,7 +25,7 @@ public:
     BinPolynom operator=(const BinPolynom&);
 
     BinPolynom operator==(const BinPolynom&);
-    BinPolynom operator<=(const BinPolynom&;
+    BinPolynom operator<=(const BinPolynom&);
     BinPolynom operator>=(const BinPolynom&);
     BinPolynom operator<(const BinPolynom&);
     BinPolynom operator>(const BinPolynom&);
